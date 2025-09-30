@@ -1,0 +1,42 @@
+# Ignore Python virtual environments
+venv/
+
+# Ignore Brave browser profile and all browser cache
+brave_profile/
+
+# Ignore OS and editor files
+.DS_Store
+*.swp
+*.swo
+*.tmp
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore log files
+*.log
+
+# Ignore environment variable and secret files
+.env
+.env.*
+secrets.json
+*.key
+*.pem
+
+# Ignore ChromeDriver and other binaries
+chromedriver
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore test output
+*.out
+*.test
+
+# Ignore backup files
+*~
+
+# Add more patterns as needed for your workflow

@@ -29,7 +29,7 @@ wait = WebDriverWait(driver, 10)
 def scrape_list():
     """Scrolls through a dialog and scrapes usernames."""
     print("Waiting for the list dialog to appear...")
-    scrollable_div_selector = ".x1i10hfl"  # Update this if Instagram changes the class
+    scrollable_div_selector = "div.x1lliihq.x1iyjqo2"  # Updated selector for scrollable container
     
     try:
         scrollable_div = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, scrollable_div_selector)))
@@ -72,7 +72,7 @@ def scrape_list():
         # Scroll to bottom and wait longer for new users to load
         driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", scrollable_div)
         print(f"[DEBUG] Scrolled to bottom (scroll {scroll_count+1}). Waiting for users to load...")
-        time.sleep(4)
+        time.sleep(7)  # Increased wait to allow for slow network/user loading
         usernames_after_scroll = len(usernames)
         print(f"Scraped {len(usernames)} usernames so far...")
         if usernames_after_scroll == usernames_before_scroll:
