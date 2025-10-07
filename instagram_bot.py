@@ -11,8 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import StaleElementReferenceException, TimeoutException
 from selenium.webdriver.common.keys import Keys
 
-# --- CONFIGURATION ---
-TARGET_USERNAME = "reetikrana"
+TARGET_USERNAME = input("Enter your Instagram username: ")
 
 # --- BRAVE BROWSER SETUP ---
 BRAVE_PATH = "/usr/bin/brave-browser"
