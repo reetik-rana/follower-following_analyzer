@@ -43,12 +43,14 @@
         <div style="background:#f0f4ff; border-left:4px solid #3897f0; padding:16px; margin-bottom:20px; border-radius:6px;">
             <strong>Important points to know before using:</strong>
             <ul style="margin-top:10px;">
-                <li>This app uses browser automation to access Instagram. You <b>must be logged in</b> to your Instagram account in the browser profile used by the app.</li>
+                <li>This app is designed to run <b>locally on your computer</b>. You must install Python, Chrome/Chromium/Brave, and ChromeDriver as described in the README.</li>
+                <li>You <b>must be logged in</b> to your Instagram account in the browser profile used by the app for it to access your followers and following lists.</li>
                 <li>If you are <b>not logged in</b>, the app will not be able to access your followers or following lists.</li>
                 <li>The app works for your own account (private or public), public accounts, and private accounts you follow.</li>
                 <li>It <b>cannot access private accounts you do not follow</b>.</li>
                 <li>Your Instagram session is used for scraping; no credentials are stored by the app.</li>
                 <li>Instagram may block or limit automation. Use responsibly and avoid frequent requests.</li>
+                <li>If you encounter errors, check your browser and ChromeDriver installation, and make sure the paths are set correctly in <code>webapp/app.py</code>.</li>
             </ul>
         </div>
         <form method="post">

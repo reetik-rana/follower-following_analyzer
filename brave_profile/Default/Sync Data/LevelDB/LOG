@@ -1,3 +1,2 @@
-2025/10/07-15:12:07.479 7d59 Reusing MANIFEST /home/babayaga/Documents/follow-analyser/brave_profile/Default/Sync Data/LevelDB/MANIFEST-000001
-2025/10/07-15:12:07.481 7d59 Recovering log #3
-2025/10/07-15:12:07.481 7d59 Reusing old log /home/babayaga/Documents/follow-analyser/brave_profile/Default/Sync Data/LevelDB/000003.log 
+2025/10/07-21:01:13.839 13b64 Creating DB /home/babayaga/Documents/follow-analyser/brave_profile/Default/Sync Data/LevelDB since it was missing.
+2025/10/07-21:01:13.842 13b64 Reusing MANIFEST /home/babayaga/Documents/follow-analyser/brave_profile/Default/Sync Data/LevelDB/MANIFEST-000001
