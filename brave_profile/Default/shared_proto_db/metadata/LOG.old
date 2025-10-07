@@ -1,3 +1,4 @@
-2025/10/07-15:12:07.515 7d62 Reusing MANIFEST /home/babayaga/Documents/follow-analyser/brave_profile/Default/shared_proto_db/metadata/MANIFEST-000001
-2025/10/07-15:12:07.516 7d62 Recovering log #3
-2025/10/07-15:12:07.517 7d62 Reusing old log /home/babayaga/Documents/follow-analyser/brave_profile/Default/shared_proto_db/metadata/000003.log 
+2025/10/07-21:01:13.851 13b70 Creating DB /home/babayaga/Documents/follow-analyser/brave_profile/Default/shared_proto_db/metadata since it was missing.
+2025/10/07-21:01:13.854 13b70 Reusing MANIFEST /home/babayaga/Documents/follow-analyser/brave_profile/Default/shared_proto_db/metadata/MANIFEST-000001
+2025/10/07-21:01:13.854 13b70 Recovering log #3
+2025/10/07-21:01:13.854 13b70 Reusing old log /home/babayaga/Documents/follow-analyser/brave_profile/Default/shared_proto_db/metadata/000003.log 

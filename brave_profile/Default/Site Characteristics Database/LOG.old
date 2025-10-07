@@ -1,3 +1,4 @@
-2025/10/07-15:12:07.487 7d54 Reusing MANIFEST /home/babayaga/Documents/follow-analyser/brave_profile/Default/Site Characteristics Database/MANIFEST-000001
-2025/10/07-15:12:07.488 7d54 Recovering log #3
-2025/10/07-15:12:07.488 7d54 Reusing old log /home/babayaga/Documents/follow-analyser/brave_profile/Default/Site Characteristics Database/000003.log 
+2025/10/07-21:01:13.841 13b73 Creating DB /home/babayaga/Documents/follow-analyser/brave_profile/Default/Site Characteristics Database since it was missing.
+2025/10/07-21:01:13.844 13b73 Reusing MANIFEST /home/babayaga/Documents/follow-analyser/brave_profile/Default/Site Characteristics Database/MANIFEST-000001
+2025/10/07-21:01:13.844 13b73 Recovering log #3
+2025/10/07-21:01:13.844 13b73 Reusing old log /home/babayaga/Documents/follow-analyser/brave_profile/Default/Site Characteristics Database/000003.log 
