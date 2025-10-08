@@ -1,2 +1,3 @@
-2025/10/07-21:01:13.841 13b7c Creating DB /home/babayaga/Documents/follow-analyser/brave_profile/Default/BraveWallet/Brave Wallet Storage since it was missing.
-2025/10/07-21:01:13.843 13b7c Reusing MANIFEST /home/babayaga/Documents/follow-analyser/brave_profile/Default/BraveWallet/Brave Wallet Storage/MANIFEST-000001
+2025/10/08-22:45:50.224 216ab Reusing MANIFEST /home/babayaga/Documents/follow-analyser/brave_profile/Default/BraveWallet/Brave Wallet Storage/MANIFEST-000001
+2025/10/08-22:45:50.224 216ab Recovering log #3
+2025/10/08-22:45:50.224 216ab Reusing old log /home/babayaga/Documents/follow-analyser/brave_profile/Default/BraveWallet/Brave Wallet Storage/000003.log 

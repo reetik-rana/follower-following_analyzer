@@ -65,12 +65,22 @@
             <div class="result">
                 <p><strong>Total Following:</strong> {{ result.total_following }}</p>
                 <p><strong>Total Followers:</strong> {{ result.total_followers }}</p>
-                <p><strong>Doesn't Follow You Back ({{ result.non_followers|length }}):</strong></p>
-                <ul>
-                {% for user in result.non_followers %}
-                    <li>{{ user }}</li>
-                {% endfor %}
-                </ul>
+                <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+                    <thead>
+                        <tr style="background:#e9f0fa;">
+                            <th style="padding:8px; border:1px solid #ccc;">Following</th>
+                            <th style="padding:8px; border:1px solid #ccc;">Follows Back</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in result.table_rows %}
+                        <tr>
+                            <td style="padding:8px; border:1px solid #ccc;">{{ row.following }}</td>
+                            <td style="padding:8px; border:1px solid #ccc;">{{ row.follows_back }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         {% endif %}
     </div>

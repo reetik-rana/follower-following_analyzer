@@ -1,2 +1,3 @@
-2025/10/07-21:01:13.850 13b64 Creating DB /home/babayaga/Documents/follow-analyser/brave_profile/Default/AdBlock Custom Resources since it was missing.
-2025/10/07-21:01:13.853 13b64 Reusing MANIFEST /home/babayaga/Documents/follow-analyser/brave_profile/Default/AdBlock Custom Resources/MANIFEST-000001
+2025/10/08-22:45:50.233 21692 Reusing MANIFEST /home/babayaga/Documents/follow-analyser/brave_profile/Default/AdBlock Custom Resources/MANIFEST-000001
+2025/10/08-22:45:50.233 21692 Recovering log #3
+2025/10/08-22:45:50.233 21692 Reusing old log /home/babayaga/Documents/follow-analyser/brave_profile/Default/AdBlock Custom Resources/000003.log 

@@ -64,7 +64,8 @@ def scrape_list():
                 if href:
                     username = href.split("/")[-2] if href.endswith("/") else href.split("/")[-1]
                     if username and username != 'verified':
-                        usernames.add(username)
+                        clean_username = username.strip().lower()
+                        usernames.add(clean_username)
         except StaleElementReferenceException:
             print("Stale element found, continuing...")
             continue
@@ -99,7 +100,7 @@ try:
     print("[DEBUG] Attempting to open 'Following' dialog...")
     wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, f"a[href='/{TARGET_USERNAME}/following/']"))).click()
     print("[DEBUG] 'Following' dialog opened. Scraping...")
-    following_set = scrape_list()
+    following_usernames = scrape_list()
 
     print("[DEBUG] Finished scraping 'Following'. Closing dialog...")
     # Try to close the dialog by clicking the close button (X)
@@ -117,20 +118,30 @@ try:
     print("[DEBUG] Attempting to open 'Followers' dialog...")
     wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, f"a[href='/{TARGET_USERNAME}/followers/']"))).click()
     print("[DEBUG] 'Followers' dialog opened. Scraping...")
-    followers_set = scrape_list()
+    followers_usernames = scrape_list()
     print("[DEBUG] Finished scraping 'Followers'.")
+
+    # Show both lists for transparency
+    print("\n--- SCRAPED USERNAMES ---")
+    print(f"Following ({len(following_usernames)}): {sorted(list(following_usernames))}")
+    print(f"Followers ({len(followers_usernames)}): {sorted(list(followers_usernames))}")
 
     # Analyze and Print Results
     print("\n--- ANALYSIS COMPLETE ---")
-    non_followers = following_set - followers_set
-    print(f"Total Following: {len(following_set)}")
-    print(f"Total Followers: {len(followers_set)}")
+    non_followers = following_usernames - followers_usernames
+    print(f"Total Following: {len(following_usernames)}")
+    print(f"Total Followers: {len(followers_usernames)}")
     print(f"Doesn't Follow You Back: {len(non_followers)}")
     print("-------------------------")
     if non_followers:
         print("Accounts that don't follow you back:")
         for user in sorted(list(non_followers)):
             print(user)
+        # Debug: Show mismatches
+        print("\n[DEBUG] Sample mismatches:")
+        for user in list(non_followers)[:10]:
+            if user not in followers_usernames:
+                print(f"{user} is in following but not in followers.")
     else:
         print("Everyone you follow also follows you back!")
 except Exception as e:
