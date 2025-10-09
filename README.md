@@ -1,71 +1,85 @@
-# Instagram Follower Analyzer
 
-A Python web app to analyze your Instagram followers and following lists using browser automation (Selenium + Chrome/Brave/Chromium).
+# Instagram Follower/Following Analyzer
 
-## Features
-- See who doesn't follow you back
-- Modern web UI (Flask)
-- Works for your own account (private/public), public accounts, and private accounts you follow
+Analyze your Instagram followers and following lists using either a CLI bot (Python/Selenium) or a browser extension (Chrome/Brave).
 
-## Prerequisites
+---
+
+## 1. CLI Bot (Python/Selenium)
+
+### Features
+- Scrapes followers and following lists using Selenium and Brave browser
+- Compares lists and outputs results
+- Uses your local Brave profile for login persistence
+
+### Requirements
 - Python 3.8+
-- Google Chrome, Chromium, or Brave browser
-- ChromeDriver (matching your browser version)
+- Brave browser
+- ChromeDriver (matching your Brave/Chrome version)
+- Selenium (`pip install selenium`)
 
-## Setup Instructions
+### Setup
+1. Install Brave browser and ChromeDriver.
+2. Clone this repository.
+3. Install Python dependencies:
+   ```bash
+   pip install selenium
+   ```
+4. Ensure `brave_profile/` exists in the project root (used for browser session).
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/reetik-rana/follower-following_analyzer.git
-cd follower-following_analyzer
-```
+### Usage
+1. Edit `instagram_bot.py` to set your username and any options.
+2. Run the bot:
+   ```bash
+   python instagram_bot.py
+   ```
+3. Follow the prompts. The bot will open Brave, log in (if needed), and scrape your lists.
 
-### 2. Install Python dependencies
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+---
 
-### 3. Install Chrome/Chromium/Brave and ChromeDriver
-- **Linux (Ubuntu):**
-  ```bash
-  sudo apt update
-  sudo apt install -y chromium-browser chromium-chromedriver
-  # OR for Chrome:
-  # Download Chrome from https://www.google.com/chrome/
-  # Download ChromeDriver from https://chromedriver.chromium.org/downloads
-  ```
-- **Windows/Mac:**
-  - Download Chrome/Brave from their official sites
-  - Download ChromeDriver from https://chromedriver.chromium.org/downloads
-  - Place `chromedriver.exe` in your project folder or add to PATH
+## 2. Browser Extension (Chrome/Brave)
 
-### 4. Configure browser path (if needed)
-- In `webapp/app.py`, set the correct browser and driver paths:
-  ```python
-  CHROME_PATH = "/usr/bin/chromium-browser"  # or your Chrome/Brave path
-  CHROMEDRIVER_PATH = "/usr/bin/chromedriver"  # or your chromedriver path
-  options = Options()
-  options.binary_location = CHROME_PATH
-  options.add_argument("--headless=new")
-  service = ChromeService(executable_path=CHROMEDRIVER_PATH)
-  driver = webdriver.Chrome(service=service, options=options)
-  ```
+### Features
+- Scrapes followers/following directly from Instagram web UI
+- No login required (uses your active session)
+- Export results to CSV or JSON
+- Simple popup UI
 
-### 5. Run the app
-```bash
-python webapp/app.py
-```
-- Open your browser and go to `http://127.0.0.1:5000/`
+### Setup
+1. Open Chrome/Brave and go to `chrome://extensions`.
+2. Enable "Developer mode" (top right).
+3. Click "Load unpacked" and select the `extension/` folder in this project.
+4. The extension icon will appear in your browser toolbar.
+
+### Usage
+1. Go to your Instagram profile in the browser.
+2. Open your followers or following dialog.
+3. Click the extension icon.
+4. Select "Followers" or "Following" tab.
+5. Click "Scrape" to extract usernames.
+6. Export results as CSV or JSON if needed.
+
+---
+
+## Project Structure
+- `instagram_bot.py` — CLI bot for local use
+- `brave_profile/` — Browser profile for CLI bot
+- `extension/` — Browser extension files
+- `README.md` — This guide
+
+---
 
 ## Troubleshooting
-- Make sure ChromeDriver version matches your browser version
-- If you get a browser not found error, update the paths in `app.py`
-- If you see permission errors, try running with `sudo` (Linux)
+- For CLI bot: Make sure ChromeDriver matches your Brave version. Keep `brave_profile/` for login persistence.
+- For extension: Make sure you are logged in to Instagram in your browser before scraping.
+
+---
 
 ## License
 MIT
 
-## Author
-[reetik-rana](https://github.com/reetik-rana)
+---
+
+## Credits
+Developed by reetik-rana and contributors.
+
