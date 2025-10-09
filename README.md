@@ -40,10 +40,9 @@ Analyze your Instagram followers and following lists using either a CLI bot (Pyt
 ## 2. Browser Extension (Chrome/Brave)
 
 ### Features
-- Scrapes followers/following directly from Instagram web UI
+- Fully automates scraping and analysis of followers/following from Instagram web UI
 - No login required (uses your active session)
-- Export results to CSV or JSON
-- Simple popup UI
+- Simple popup UI with a single "Scrape & Analyze" button
 
 ### Setup
 1. Open Chrome/Brave and go to `chrome://extensions`.
@@ -52,12 +51,10 @@ Analyze your Instagram followers and following lists using either a CLI bot (Pyt
 4. The extension icon will appear in your browser toolbar.
 
 ### Usage
-1. Go to your Instagram profile in the browser.
-2. Open your followers or following dialog.
-3. Click the extension icon.
-4. Select "Followers" or "Following" tab.
-5. Click "Scrape" to extract usernames.
-6. Export results as CSV or JSON if needed.
+1. Go to your Instagram profile page in the browser.
+2. Click the extension icon.
+3. Click the "Scrape & Analyze" button.
+4. The extension will automatically open, scroll, and scrape both followers and following lists, then display the analysis (who doesn't follow you back).
 
 ---
 
@@ -71,7 +68,7 @@ Analyze your Instagram followers and following lists using either a CLI bot (Pyt
 
 ## Troubleshooting
 - For CLI bot: Make sure ChromeDriver matches your Brave version. Keep `brave_profile/` for login persistence.
-- For extension: Make sure you are logged in to Instagram in your browser before scraping.
+- For extension: Make sure you are logged in to Instagram in your browser before scraping. Open your Instagram profile page before clicking the extension icon.
 
 ---
 
